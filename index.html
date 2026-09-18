@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本語×AIで時給UPガイド - みな</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+body {
+  font-family: 'Inter', 'Noto Sans JP', sans-serif;
+  background-color: #fcf9f2;
+  color: #333333;
+}
+.highlight-marker {
+  background: linear-gradient(transparent 60%, #ffcda5 0%);
+  padding-bottom: 2px;
+}
+.step-number {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.animate-bounce-slow { animation: bounce-slow 2.5s infinite; }
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.animate-float { animation: float 4s ease-in-out infinite; }
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
+}
+#copyToast {
+  display: none;
+  animation: toastPop 0.3s ease-out;
+}
+@keyframes toastPop {
+  0% { opacity: 0; transform: translate(-50%, 10px); }
+  100% { opacity: 1; transform: translate(-50%, 0); }
+}
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#ff8a75',
+        secondary: '#5cbe96',
+        accent: '#ffb347',
+        bgLight: '#fffcf7',
+      }
+    }
+  }
+}
+</script>
+</head>
+<body class="max-w-2xl mx-auto">
+
+<!-- ヘッダー -->
+<header class="px-6 pt-10 pb-10 text-center">
+    <span class="inline-block bg-primary/10 text-primary font-bold px-4 py-2 rounded-full text-xs sm:text-sm mb-5 shadow-sm">
+        🗣️ 日本語ができればOK！
+    </span>
+
+    <h1 class="text-3xl sm:text-4xl font-extrabold leading-snug mb-8">
+        <span class="text-primary">おすすめ副業</span>3選
+    </h1>
+
+    <div class="bg-white rounded-2xl shadow-md border border-gray-100 p-5 max-w-sm mx-auto flex items-center gap-4">
+        <img src="assets/profile.png" alt="みな" class="w-16 h-16 rounded-full object-cover object-top shrink-0 border-2 border-primary/20">
+        <div class="text-left">
+            <p class="font-bold text-sm text-gray-800">みな</p>
+            <p class="text-xs text-gray-500 mb-1">AI×SNSで在宅収入を叶える主婦</p>
+            <a href="https://www.instagram.com/mina_ai_fukugyo/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-[11px] text-primary font-medium">
+                <svg class="w-3.5 h-3.5 mr-1 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                @mina_ai_fukugyo
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- お悩みセクション -->
+<section class="bg-blue-50/50 rounded-[2.5rem] mx-4 px-6 py-12 mb-16">
+    <h2 class="text-xl sm:text-2xl font-bold text-center mb-8">
+        😰 こんなお悩みありませんか？
+    </h2>
+
+    <div class="space-y-4 mb-8">
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
+            <p class="text-sm sm:text-base leading-relaxed">
+                😢 <strong class="text-primary">「英語ができないから」</strong>と、<br>AI関連のお仕事は最初から諦めている
+            </p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
+            <p class="text-sm sm:text-base leading-relaxed">
+                😔 育児や家事のスキマ時間で<strong class="text-primary">ゆとりになる収入</strong>がほしいけど、<br>何から始めればいいか分からない
+            </p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
+            <p class="text-sm sm:text-base leading-relaxed">
+                😣 特別な<strong class="text-primary">資格やスキルがない</strong>から、<br>自分にできることなんてないと思っている
+            </p>
+        </div>
+    </div>
+
+    <p class="text-sm sm:text-base text-gray-700 leading-relaxed text-center mb-8">
+        分かります、その気持ち…🥺<br>
+        でも実は、<strong>「日本語が話せること」自体</strong>が、<br>
+        AI時代にちゃんと収入に変えられるスキルなんです。
+    </p>
+
+    <div class="bg-white border-2 border-primary/30 rounded-2xl p-6 text-center shadow-sm">
+        <p class="font-bold text-base sm:text-lg text-gray-800 mb-2">
+            そのお悩み<br class="sm:hidden">『日本語×AIのおうちワーク』で<br>解決できます！💡
+        </p>
+        <p class="text-xs sm:text-sm text-gray-600">
+            英語力・専門知識ゼロから、<br>スキマ時間で始められる3つのワークをご紹介します🌻
+        </p>
+    </div>
+</section>
+
+<!-- なぜ日本語だけで稼げるのか -->
+<section class="px-6 mb-14">
+    <h2 class="text-lg sm:text-xl font-bold text-center mb-6">
+        🧸🌼 なぜ「日本語」を話せるだけで<br>AIを使った収入につながるの？
+    </h2>
+    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
+        <p class="text-sm sm:text-base leading-relaxed mb-4">
+            今、世界中のAI企業が<br>
+            <strong class="text-primary highlight-marker">「日本語ネイティブ」を探しています</strong>🌏
+        </p>
+        <p class="text-sm sm:text-base leading-relaxed mb-4">
+            AIは主に英語のデータで学習しているため、<br>
+            日本語特有の「敬語」や「主語の省略」がまだ苦手です。
+        </p>
+        <p class="text-sm sm:text-base leading-relaxed">
+            だからこそ、日本語を自然にするために<br>
+            <strong>日本語を母語とする人の声やチェック</strong>が<br>
+            欠かせないんです😌<br><br>
+            「日本語を普通に使えること」自体が、<br>
+            AI時代に価値の高いスキルになります🥹
+        </p>
+    </div>
+</section>
+
+<!-- 全体の流れ（図解） -->
+<section class="px-6 mb-14">
+    <h2 class="text-lg sm:text-xl font-bold text-center mb-6">🗺️ はじめるまでの流れ</h2>
+    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
+        <div class="flex items-center justify-between">
+            <div class="flex flex-col items-center w-1/3">
+                <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-2xl mb-2">🔍</div>
+                <p class="text-xs font-bold text-gray-700 text-center">サイトで<br>案件を探す</p>
+            </div>
+            <span class="text-primary text-xl mb-6">→</span>
+            <div class="flex flex-col items-center w-1/3">
+                <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-2xl mb-2">✍🏻</div>
+                <p class="text-xs font-bold text-gray-700 text-center">テンプレで<br>応募する</p>
+            </div>
+            <span class="text-primary text-xl mb-6">→</span>
+            <div class="flex flex-col items-center w-1/3">
+                <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-2xl mb-2">💰</div>
+                <p class="text-xs font-bold text-gray-700 text-center">作業して<br>収入になる</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- お仕事①：短文読み上げ -->
+<section class="px-6 mb-14">
+    <div class="bg-white rounded-3xl shadow-md border border-gray-100 p-6">
+        <div class="flex items-center mb-4">
+            <span class="step-number text-3xl font-extrabold mr-3">01</span>
+            <h3 class="text-lg font-bold">🪿 短文読み上げワーク</h3>
+        </div>
+        <p class="text-sm text-gray-700 leading-relaxed mb-4">
+            指定されたアプリに表示された文章を、<br>声に出して読み上げるだけのお仕事です。<br>
+            AIの音声データを作るための案件です🌻
+        </p>
+        <div class="grid grid-cols-3 gap-2 mb-4 text-center">
+            <div class="bg-gray-50 rounded-xl p-3">
+                <p class="text-lg mb-1">⏱️</p>
+                <p class="text-[11px] text-gray-600">30〜60分</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-3">
+                <p class="text-lg mb-1">💴</p>
+                <p class="text-[11px] text-gray-600">6〜20ドル</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-3">
+                <p class="text-lg mb-1">🔰</p>
+                <p class="text-[11px] text-gray-600">未経験OK</p>
+            </div>
+        </div>
+        <p class="text-xs font-bold text-gray-600 mb-2">📍 見つかるサイト</p>
+        <p class="text-sm mb-4">
+            <a href="https://www.upwork.com/" target="_blank" rel="noopener noreferrer" class="text-primary font-medium underline underline-offset-2">Upwork</a>
+            ／
+            <a href="https://www.appen.com/" target="_blank" rel="noopener noreferrer" class="text-primary font-medium underline underline-offset-2">Appen</a>
+        </p>
+
+        <p class="text-xs font-bold text-gray-600 mb-2">🔍 検索キーワード</p>
+        <div class="bg-gray-900 text-green-300 rounded-xl p-4 font-mono text-xs sm:text-sm mb-2 overflow-x-auto">
+            <p id="prompt1">Voice Recording Japanese</p>
+        </div>
+        <button onclick="copyPrompt('prompt1')" class="w-full bg-primary/10 text-primary font-bold text-xs py-2 rounded-xl mb-5 active:scale-95 transition-transform">
+            📋 キーワードをコピー
+        </button>
+
+        <p class="text-xs font-bold text-gray-600 mb-2">✍🏻 コピペOKプロンプト（応募文テンプレ）</p>
+        <div class="bg-gray-900 text-green-300 rounded-xl p-4 font-mono text-xs leading-relaxed mb-2 overflow-x-auto">
+<pre id="prompt2">Hi there! I'm a native Japanese speaker based in Japan, recording
+in a quiet home environment. I'm comfortable following detailed
+app instructions and can usually turn work around within a day.
+Could you share the exact file format you need, along with any
+guidelines on mic distance or device setup before I start?</pre>
+        </div>
+        <button onclick="copyPrompt('prompt2')" class="w-full bg-primary/10 text-primary font-bold text-xs py-2 rounded-xl active:scale-95 transition-transform">
+            📋 応募文をコピー
+        </button>
+    </div>
+</section>
+
+<!-- お仕事②：雑談ワーク -->
+<section class="px-6 mb-14">
+    <div class="bg-white rounded-3xl shadow-md border border-gray-100 p-6">
+        <div class="flex items-center mb-4">
+            <span class="step-number text-3xl font-extrabold mr-3">02</span>
+            <h3 class="text-lg font-bold">🥂 雑談ワーク（会話パートナー）</h3>
+        </div>
+        <p class="text-sm text-gray-700 leading-relaxed mb-4">
+            日本語を学んでいる海外の方と、<br>ZoomやDiscordでおしゃべりするだけのお仕事です。
+        </p>
+        <div class="grid grid-cols-3 gap-2 mb-4 text-center">
+            <div class="bg-gray-50 rounded-xl p-3">
+                <p class="text-lg mb-1">⏱️</p>
+                <p class="text-[11px] text-gray-600">30分〜1h</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-3">
+                <p class="text-lg mb-1">💴</p>
+                <p class="text-[11px] text-gray-600">時給10ドル〜</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-3">
+                <p class="text-lg mb-1">🔰</p>
+                <p class="text-[11px] text-gray-600">免許不要</p>
+            </div>
+        </div>
+        <p class="text-xs font-bold text-gray-600 mb-2">📍 見つかるサイト</p>
+        <p class="text-sm mb-4">
+            <a href="https://www.italki.com/" target="_blank" rel="noopener noreferrer" class="text-primary font-medium underline underline-offset-2">iTalki</a>（手数料15%と低め）／
+            <a href="https://preply.com/" target="_blank" rel="noopener noreferrer" class="text-primary font-medium underline underline-offset-2">Preply</a>（継続で手数料減）／
+            <a href="https://www.upwork.com/" target="_blank" rel="noopener noreferrer" class="text-primary font-medium underline underline-offset-2">Upwork</a>
+        </p>
+
+        <p class="text-xs font-bold text-gray-600 mb-2">🔍 検索キーワード（Upworkの場合）</p>
+        <div class="bg-gray-900 text-green-300 rounded-xl p-4 font-mono text-xs sm:text-sm mb-5 overflow-x-auto">
+            <p id="prompt3">Conversation partner Japanese</p>
+        </div>
+        <button onclick="copyPrompt('prompt3')" class="w-full bg-primary/10 text-primary font-bold text-xs py-2 rounded-xl mb-5 active:scale-95 transition-transform">
+            📋 キーワードをコピー
+        </button>
+
+        <div class="bg-yellow-50 border border-yellow-200 rounded-2xl p-4">
+            <p class="text-xs font-bold text-gray-700 mb-1">✍🏻💡 ワンポイントアドバイス</p>
+            <p class="text-xs text-gray-700 leading-relaxed">
+                沈黙を防ぐために<strong>話題を事前に用意</strong>しておきましょう。<br>
+                「好きな食べ物」「休日の過ごし方」などをストックしておくと安心です🌻<br><br>
+                「ビジネス日本語」「面接対策」など<strong>ターゲットを絞り込む</strong>ことで、
+                無資格から時給を大きく伸ばした方もいます。
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- お仕事③：文章チェック -->
+<section class="px-6 mb-14">
+    <div class="bg-white rounded-3xl shadow-md border border-gray-100 p-6">
+        <div class="flex items-center mb-4">
+            <span class="step-number text-3xl font-extrabold mr-3">03</span>
+            <h3 class="text-lg font-bold">🌻 AI文章のチェック・修正</h3>
+        </div>
+        <p class="text-sm text-gray-700 leading-relaxed mb-4">
+            AIが作成した日本語に不自然なところがないか確認し、<br>自然な日本語に修正する作業です。
+        </p>
+        <div class="bg-primary/5 border border-primary/20 rounded-xl p-3 mb-4">
+            <p class="text-xs sm:text-sm text-gray-700">
+                🔥 AIの日本語対応がまだ発展途中の<strong class="text-primary">「今」が狙い目</strong>です
+            </p>
+        </div>
+        <div class="grid grid-cols-2 gap-2 mb-4 text-center">
+            <div class="bg-gray-50 rounded-xl p-3">
+                <p class="text-lg mb-1">💴</p>
+                <p class="text-[11px] text-gray-600">時給12〜25ドル</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-3">
+                <p class="text-lg mb-1">✏️</p>
+                <p class="text-[11px] text-gray-600">自然な日本語に修正</p>
+            </div>
+        </div>
+        <p class="text-xs font-bold text-gray-600 mb-2">📍 見つかるサイト</p>
+        <p class="text-sm mb-4">
+            <a href="https://www.upwork.com/" target="_blank" rel="noopener noreferrer" class="text-primary font-medium underline underline-offset-2">Upwork</a>
+            ／
+            <a href="https://outlier.ai/" target="_blank" rel="noopener noreferrer" class="text-primary font-medium underline underline-offset-2">Outlier AI</a>
+            ／
+            <a href="https://www.appen.com/" target="_blank" rel="noopener noreferrer" class="text-primary font-medium underline underline-offset-2">Appen</a>
+        </p>
+
+        <p class="text-xs font-bold text-gray-600 mb-2">🔍 検索キーワード</p>
+        <div class="bg-gray-900 text-green-300 rounded-xl p-4 font-mono text-xs sm:text-sm mb-2 overflow-x-auto">
+<pre id="prompt4">Japanese proofreading AI generated
+RLHF Japanese</pre>
+        </div>
+        <button onclick="copyPrompt('prompt4')" class="w-full bg-primary/10 text-primary font-bold text-xs py-2 rounded-xl mb-5 active:scale-95 transition-transform">
+            📋 キーワードをコピー
+        </button>
+
+        <div class="bg-yellow-50 border border-yellow-200 rounded-2xl p-4 mb-5">
+            <p class="text-xs font-bold text-gray-700 mb-1">✍🏻💡 ワンポイントアドバイス</p>
+            <p class="text-xs text-gray-700 leading-relaxed">
+                「なんか変」ではなく<strong>「主語がねじれている」「敬語が誤り」</strong>と<br>
+                理由を言葉にできると高評価につながります🐶<br>
+                応募時は<strong>修正サンプルを添えるだけで採用率アップ</strong>！
+            </p>
+        </div>
+
+        <p class="text-xs font-bold text-gray-600 mb-2">✍🏻 コピペOKプロンプト（応募文に添える修正例）</p>
+        <div class="bg-gray-900 text-green-300 rounded-xl p-4 font-mono text-[11px] sm:text-xs leading-relaxed mb-2 overflow-x-auto">
+<pre id="prompt5">To show you the kind of edits I make, here's a sample:
+
+Original: このシステムは、ユーザーが情報を入力すると、自動的に
+データを分析し、レポートが生成されます。
+Revised: このシステムは、ユーザーが入力した情報を自動的に
+分析し、レポートを生成します。
+
+Why: The sentence mixes active and passive verb forms, which
+reads unnaturally in Japanese — a pattern I frequently catch in
+AI-generated text.</pre>
+        </div>
+        <button onclick="copyPrompt('prompt5')" class="w-full bg-primary/10 text-primary font-bold text-xs py-2 rounded-xl active:scale-95 transition-transform">
+            📋 修正例をコピー
+        </button>
+    </div>
+</section>
+
+<!-- 比較表 -->
+<section class="px-6 mb-14">
+    <h2 class="text-lg sm:text-xl font-bold text-center mb-6">🧸🧁 3つのワークを比較</h2>
+    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+        <table class="w-full text-xs sm:text-sm text-left">
+            <thead class="bg-primary/10">
+                <tr>
+                    <th class="p-3 font-bold">ワーク</th>
+                    <th class="p-3 font-bold">難易度</th>
+                    <th class="p-3 font-bold">向いている人</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+                <tr>
+                    <td class="p-3">🎧 短文読み上げ</td>
+                    <td class="p-3">とても易しい</td>
+                    <td class="p-3">まず1件やってみたい人</td>
+                </tr>
+                <tr>
+                    <td class="p-3">🗣 雑談ワーク</td>
+                    <td class="p-3">易〜普通</td>
+                    <td class="p-3">話すのが好きな人</td>
+                </tr>
+                <tr>
+                    <td class="p-3">✍🏻 文章チェック</td>
+                    <td class="p-3">普通</td>
+                    <td class="p-3">文章を書くのが好きな人</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="bg-yellow-50 border border-yellow-200 rounded-2xl p-4 mt-4">
+        <p class="text-xs font-bold text-gray-700 mb-1">✍🏻💡 ワンポイントアドバイス</p>
+        <p class="text-xs text-gray-700 leading-relaxed">
+            どれか1つに絞らず、<strong>まず短文読み上げで実績を作ってから</strong><br>
+            他のワークにも挑戦していくのがおすすめです🌻
+        </p>
+    </div>
+</section>
+
+<!-- でも、正直にお伝えします セクション（完全固定） -->
+<section class="py-16 px-6 bg-gray-800 text-white text-center">
+    <h2 class="text-2xl sm:text-3xl font-bold mb-8">
+        ⚠️ でも、正直にお伝えします。
+    </h2>
+
+    <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-8 max-w-lg mx-auto text-left">
+        ここまで読んで、「日本語×AIのおうちワークもやってみようかな」と思ったかもしれません。<br><br>
+        でも実は…<br>
+        <strong class="text-white text-lg border-b-2 border-primary pb-1">「やり方を知っていること」と<br>「実際に継続して収入にできること」</strong><br>は、全く別物なんです。
+    </p>
+
+    <ul class="text-left max-w-md mx-auto space-y-4 mb-8 bg-gray-700/50 p-6 rounded-2xl border border-gray-600">
+        <li class="flex items-start">
+            <span class="text-primary text-xl mr-3 shrink-0">🤔</span>
+            <span class="text-gray-200 text-sm">何から応募すればいいのか、案件の選び方が分からない</span>
+        </li>
+        <li class="flex items-start">
+            <span class="text-primary text-xl mr-3 shrink-0">🤔</span>
+            <span class="text-gray-200 text-sm">最初の1件をどう取ればいいのか、採用される自信がない</span>
+        </li>
+        <li class="flex items-start">
+            <span class="text-primary text-xl mr-3 shrink-0">🤔</span>
+            <span class="text-gray-200 text-sm">単発で終わらせず、継続的な収入にする方法が分からない</span>
+        </li>
+    </ul>
+
+    <p class="text-gray-300 mb-12">
+        ここでつまずいて、諦めてしまう方がいちばん多いんです🥺
+    </p>
+
+    <div class="bg-white text-gray-800 rounded-3xl p-6 sm:p-8 text-left relative mt-16 max-w-lg mx-auto shadow-2xl">
+        <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-800 text-white px-6 py-2 rounded-full font-bold border-4 border-white whitespace-nowrap shadow-md">
+            💔 実は私も、大失敗だらけでした
+        </div>
+        <p class="text-sm sm:text-base leading-relaxed mt-4 mb-4">
+            私自身、過去に自己流で副業に手を出し、<br>
+            <strong class="text-red-500 text-lg highlight-marker">150万円ものお金を失う</strong><br>
+            という痛い経験をしています。
+        </p>
+        <p class="text-sm text-gray-600 mb-6 bg-gray-50 p-3 rounded-lg">
+            「私には才能がないんだ…」とお布団の中で一人泣いた夜は数え切れません。
+        </p>
+        <p class="text-sm sm:text-base leading-relaxed">
+            そこから必死に試行錯誤し、ようやく見つけたのが<strong class="text-gray-800">「AIを賢く活用し、手堅くお家で収入を作るための『実践ノウハウと神テンプレート』」</strong>でした。<br><br>
+            私と今のあなたの違いは、才能ではありません。<br>
+            <strong class="text-primary font-bold">「成果が出る『型』を知っていて、<br>失敗を避ける方法を知っているかどうか」</strong><br>だけなんです。
+        </p>
+    </div>
+</section>
+
+<!-- 特別なプレゼント セクション（完全固定） -->
+<!-- 新手法ティザー・オプチャ誘導 セクション -->
+<section class="py-16 px-6 bg-gradient-to-b from-[#fffcf7] to-[#ffe5d9]">
+    <div class="text-center mb-8">
+        <span class="inline-block bg-white text-primary border border-primary/30 font-bold px-6 py-3 rounded-3xl text-sm mb-4 shadow-sm animate-bounce-slow leading-snug">
+            日本語ワークの、その先へ。<br>もっと安定して稼ぎたいあなたへ
+        </span>
+    </div>
+
+    <p class="text-center text-gray-800 text-base sm:text-lg leading-relaxed mb-8 max-w-lg mx-auto font-bold bg-yellow-100/50 p-4 rounded-2xl border border-yellow-200">
+        日本語を活かしたお仕事を1件ずつこなすやり方も素敵だけど、<br>正直、単発の収入だけだと不安が消えないですよね。<br><span class="text-primary text-xl block mt-2">もっと再現性が高くて、<br>スマホとAIだけで完結する<br>新しい在宅の稼ぎ方</span><br>を、実は最近見つけました。
+    </p>
+
+    <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-gray-100 max-w-lg mx-auto relative mb-12">
+        <div class="absolute -top-4 right-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+            近日公開🎁
+        </div>
+
+        <p class="text-sm text-gray-500 text-center mb-1">それが…</p>
+        <h3 class="text-2xl font-bold text-center text-gray-800 mb-6">
+            AI × ?? 新手法
+        </h3>
+
+        <div class="bg-gray-50 rounded-2xl p-5 border border-gray-100">
+            <p class="font-bold text-center text-gray-800 mb-4 text-sm border-b border-gray-200 pb-2">
+                副業選びで見るべき、5つの条件
+            </p>
+            <ul class="space-y-3 text-sm text-gray-700">
+                <li class="flex items-start"><span class="mr-2 text-lg shrink-0">⏱️</span><span class="pt-0.5">時間がかからない</span></li>
+                <li class="flex items-start"><span class="mr-2 text-lg shrink-0">🔁</span><span class="pt-0.5">主婦でも稼げる再現性がある</span></li>
+                <li class="flex items-start"><span class="mr-2 text-lg shrink-0">📈</span><span class="pt-0.5">市場が大きい</span></li>
+                <li class="flex items-start"><span class="mr-2 text-lg shrink-0">🙈</span><span class="pt-0.5">家族にバレない</span></li>
+                <li class="flex items-start"><span class="mr-2 text-lg shrink-0">📱</span><span class="pt-0.5">スマホ1台で完結する</span></li>
+            </ul>
+        </div>
+
+        <p class="text-sm text-gray-700 mt-6 leading-relaxed bg-white/80">
+            この5つ、どれか1つでも欠けると続かなかったり、成果が出にくくなります。<br><br>
+            そんな中、<strong class="text-rose-600">この条件をかなり満たす新しい手法</strong>を最近見つけました。<br><br>
+            <strong class="text-rose-600">専用のオープンチャットだけで、先行公開</strong>していきます。
+        </p>
+
+        <a href="https://line.me/ti/g2/-iZ9LBnhq6PqtsV0tf52ID7_K5QNRmfn5Hqesg?utm_source=invitation&amp;utm_medium=link_copy&amp;utm_campaign=default" rel="noopener noreferrer" target="_blank" class="mt-6 flex justify-center transition-transform hover:scale-[1.02] active:scale-[0.98]">
+            <img alt="AI×??新手法 近日公開 オプチャに参加する" src="assets/teaser_openchat.png" class="rounded-2xl shadow-md max-w-full h-auto object-contain">
+        </a>
+    </div>
+
+    <div class="max-w-lg mx-auto text-center">
+        <p class="text-[10px] sm:text-xs text-gray-500 text-left bg-white/50 p-3 rounded-lg">
+            ※オープンチャットの参加人数には上限があります。予告なく受付を終了する場合がありますので、お早めにご参加ください。
+        </p>
+    </div>
+</section>
+
+
+<!-- フッター（完全固定） -->
+<footer class="bg-white py-8 border-t border-gray-100 text-center">
+    <a href="https://www.instagram.com/mina_ai_fukugyo/" rel="noopener noreferrer" target="_blank" class="inline-flex items-center justify-center text-gray-600 hover:text-primary transition-colors mb-4">
+        <svg class="w-5 h-5 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        <span class="text-sm font-medium">Instagram: @mina_ai_fukugyo</span>
+    </a>
+    <p class="text-xs text-gray-500 mb-1">みな ｜ AI×SNSで在宅収入を叶える主婦</p>
+    <p class="text-xs text-gray-400">&copy; 2026 @mina_ai_fukugyo. All Rights Reserved.</p>
+</footer>
+
+<!-- コピートースト -->
+<div id="copyToast" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs font-bold px-5 py-3 rounded-full shadow-xl items-center z-50">
+    ✅ コピーしました！
+</div>
+
+<script>
+function copyPrompt(elementId) {
+    const textToCopy = document.getElementById(elementId).innerText;
+    const toast = document.getElementById('copyToast');
+    navigator.clipboard.writeText(textToCopy).then(() => {
+        toast.style.display = 'flex';
+        toast.style.animation = 'none';
+        toast.offsetHeight;
+        toast.style.animation = null;
+        setTimeout(() => { toast.style.display = 'none'; }, 2000);
+    }).catch(err => {
+        console.error('コピーに失敗しました', err);
+        fallbackCopyTextToClipboard(textToCopy, toast);
+    });
+}
+function fallbackCopyTextToClipboard(text, toast) {
+    const textArea = document.createElement("textarea");
+    textArea.value = text;
+    textArea.style.top = "0"; textArea.style.left = "0"; textArea.style.position = "fixed";
+    document.body.appendChild(textArea);
+    textArea.focus(); textArea.select();
+    try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+            toast.style.display = 'flex';
+            setTimeout(() => { toast.style.display = 'none'; }, 2000);
+        }
+    } catch (err) { console.error('Fallback: Oops, unable to copy', err); }
+    document.body.removeChild(textArea);
+}
+</script>
+
+</body>
+</html>
